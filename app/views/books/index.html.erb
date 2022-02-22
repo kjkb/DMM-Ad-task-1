@@ -1,4 +1,4 @@
-<h1>Books</h1>
+<h1><storong>Books</storong></h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
         <td><%= book.title %></td>
         <td><%= book.body %></td>
         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
-        <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+        <td><%= link_to 'Edit', edit_book_path(book.id), class: "edit_#{book.id}" %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
       </tr>
     <% end %>
@@ -23,5 +23,5 @@
 </table>
 
 
-<h2>New book</h2>
-<%= render 'form' %>
+<h2><storong>New book</storong></h2>
+<%= render 'form', book: @book%>
